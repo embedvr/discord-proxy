@@ -46,11 +46,11 @@ const host = process.env.HOST || "0.0.0.0";
 const port = process.env.PORT || 3333;
 
 const canonicalUrl = new URL(
-  process.env.CANONICAL_URL || `http://127.0.0.1:${port}`
+  process.env.CANONICAL_URL || `https://prox.bone.lol`
 );
 
 const buildHash =
-  process.env.BUILD_HASH || "3356503f99cffc142754165f17e9a13bfd708953";
+  process.env.BUILD_HASH || "c9b910ee3d886b03f2f3166e091bf9a8acfdee2d";
 
 app.get("*", async (_request, reply) => {
   const response = await fetch(`https://api.discord.sale/builds/${buildHash}`);
